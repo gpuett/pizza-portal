@@ -71,7 +71,7 @@ $(document).ready(function() {
       console.log(inputToppings);
       console.log(newPizza.price());
     });
-
     $("#output").text("The price of your order will be $" + newPizza.price() +".");
+
   });
 });
