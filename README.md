@@ -20,7 +20,7 @@ A program that will take user pizza order and calculate price.
 
 ## Setup/Installation Requirements
 
-Open browser and travel to <a href="https://gpuett.github.io/pizza-portal/">this link</a>
+Open browser and travel to <a href="https://gpuett.github.io/pizza-portal/index">this link</a>
 
 ## Known Bugs
 * No known bugs at this time.
