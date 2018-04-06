@@ -2,15 +2,12 @@
 function Pizza(size, toppings) {
   this.size = size;
   this.toppings = toppings;
-  this.price = function() {
-    return this.size + this.toppings + 10;
-  }
 }
 
 
-// Pizza.prototype.price = function() {
-//   return this.size + this.toppings + 10;
-// }
+Pizza.prototype.price = function() {
+  return this.size + this.toppings + 10;
+}
 
 
 
@@ -62,7 +59,7 @@ $(document).ready(function() {
     // var newPizza = new Pizza(inputSize, inputToppings);
 
     $(".new-pizza").each(function() {
-      var newPizza = new Pizza(inputSize, inputToppings, inputPrice);
+      var newPizza = new Pizza(inputSize, inputToppings);
       var inputSize = 0;
       $(this).find("#size").each(function() {
         inputSize += parseInt($(this).val());
