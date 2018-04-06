@@ -16,8 +16,9 @@ $(document).ready(function() {
     event.preventDefault();
 
     var inputSize = $("#size").val();
-    var inputToppings = $("input:checkbox[name=toppings]:checked").each(function() {
-       += parseInt($(this).val());
+    var inputToppings = 0;
+    $("input:checkbox[name=toppings]:checked").each(function() {
+       inputToppings += parseInt($(this).val());
     });
     console.log(inputToppings);
     var newPizza = new Pizza(inputSize, inputToppings);
