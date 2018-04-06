@@ -76,9 +76,9 @@ $(document).ready(function() {
         total += (inputSize + inputToppings + 10*i);
       }
 
-      // $("#output").text("The price of your order will be $" + total +".");
+      $("#output").text("The price of your order will be $" + total +".");
       console.log(inputSize + inputToppings + 10);
-      console.log(newOrder);
+      console.log(newPizza);
       console.log(total);
     });
   });
