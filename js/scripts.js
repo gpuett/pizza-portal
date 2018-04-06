@@ -5,7 +5,7 @@ function Pizza(size, toppings) {
 }
 
 Pizza.prototype.price = function() {
-  return parseInt(this.size) + parseInt(this.toppings) + 10;
+  return this.size + this.toppings + 10;
 }
 
 
@@ -49,7 +49,7 @@ $(document).ready(function() {
   $("#order").submit(function(event) {
     event.preventDefault();
 
-    var inputSize = $("#size").val();
+    var inputSize = parseInt($("#size").val());
     var inputToppings = 0;
     $("input:checkbox[name=toppings]:checked").each(function() {
        inputToppings += parseInt($(this).val());
