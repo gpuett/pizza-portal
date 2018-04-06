@@ -2,12 +2,15 @@
 function Pizza(size, toppings) {
   this.size = size;
   this.toppings = toppings;
+  this.price = function() {
+    return this.size + this.toppings + 10;
+  }
 }
 
 
-Pizza.prototype.price = function() {
-  return this.size + this.toppings + 10;
-}
+// Pizza.prototype.price = function() {
+//   return this.size + this.toppings + 10;
+// }
 
 
 
@@ -59,7 +62,7 @@ $(document).ready(function() {
     // var newPizza = new Pizza(inputSize, inputToppings);
 
     $(".new-pizza").each(function() {
-      var newPizza = new Pizza(inputSize, inputToppings)
+      var newPizza = new Pizza(inputSize, inputToppings, inputPrice);
       var inputSize = 0;
       $(this).find("#size").each(function() {
         inputSize += parseInt($(this).val());
@@ -68,13 +71,17 @@ $(document).ready(function() {
       $(this).find("input:checkbox[name=toppings]:checked").each(function() {
         inputToppings += parseInt($(this).val());
       });
+      var inputPrice = inputSize + inputToppings + 10;
       var total = 0;
-      total += newPizza.price();
+      $(newPizza).each(function() {
+        total += inputPrice;
+      })
+      total += inputPrice;
       console.log(inputSize);
       console.log(inputToppings);
-      console.log(newPizza);
+      console.log(total);
 
-      $("#output").text("The price of your order will be $" + newPizza.price() +".");
+      $("#output").text("The price of your order will be $" + total +".");
     });
 
   });
