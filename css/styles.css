@@ -6,3 +6,13 @@ h1 {
   font-family: verdana;
   font-weight: bolder;
 }
+
+body {
+  background-image: url(../img/pizza.jpg);
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  min-height: 600px;
+}

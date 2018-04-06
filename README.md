@@ -10,11 +10,11 @@ A program that will take user pizza order and calculate price.
 
 
 ### Specs
-| Spec | Input | Output |
+| Specification | Input | Output |
 | :-------------     | :------------- | :------------- |
-| **Program Gathers User Input for Pizza Size** | User input: "medium" | Output: "medium" |
-| **Program Gathers User Input for Pizza Toppings**| User Input: "Olives, Red Onion" | Output: "Olives, Red Onion" |
-| **Program Calculates and Displays Price based on User Inputs**| Input: "medium, Olives, Red Onion" | Output: "$12" |
+| **Program Gathers User Input for Pizza Size** | "Medium" | "Medium" |
+| **Program Gathers User Input for Pizza Toppings**| "Black Olives, Red Onion" | "Black Olives, Red Onion" |
+| **Program Calculates and Displays Price based on User Inputs**| "Medium, Black Olives, Red Onion" | Output: "$16" |
 
 
 ## Setup/Installation Requirements

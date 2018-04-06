@@ -20,9 +20,7 @@ $(document).ready(function() {
     $("input:checkbox[name=toppings]:checked").each(function() {
        inputToppings += parseInt($(this).val());
     });
-    console.log(inputToppings);
     var newPizza = new Pizza(inputSize, inputToppings);
-    console.log(newPizza.price());
     $("#output").text("The price of your order will be $" + newPizza.price() +".");
   });
 });
