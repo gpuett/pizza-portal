@@ -4,8 +4,9 @@ function Pizza(size, toppings) {
   this.toppings = toppings;
 }
 
+
 Pizza.prototype.price = function() {
-  return parseInt(this.size) + parseInt(this.toppings) + 10;
+  return this.size + this.toppings + 10;
 }
 
 
@@ -67,11 +68,14 @@ $(document).ready(function() {
       $(this).find("input:checkbox[name=toppings]:checked").each(function() {
         inputToppings += parseInt($(this).val());
       });
+      var total = 0;
+      total += newPizza.price();
       console.log(inputSize);
       console.log(inputToppings);
-      console.log(newPizza.price());
+      console.log(newPizza);
+
+      $("#output").text("The price of your order will be $" + newPizza.price() +".");
     });
-    $("#output").text("The price of your order will be $" + newPizza.price() +".");
 
   });
 });
