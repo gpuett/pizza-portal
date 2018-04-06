@@ -9,10 +9,11 @@
   </head>
   <body>
     <div class="container">
-      <h1>Pizza Portal</h1>
+      <h1>Veggie Pizza Portal</h1>
       <form id="order">
         <div class="row">
           <div class="col col-md">
+            <label for="size">Choose your size:</label>
             <select class="form-control" id="size">
               <option value="0"></option>
               <option value="2">Small</option>
@@ -21,13 +22,18 @@
             </select>
           </div>
           <div class="col col-md">
-            <div id="toppings">
-              <input type="checkbox" name="toppings" value="1">Red Onion<br>
-              <input type="checkbox" name="toppings" value="1">Green Peppers<br>
-              <input type="checkbox" name="toppings" value="1">Black Olives<br>
-              <input type="checkbox" name="toppings" value="1">Mushrooms<br>
-              <input type="checkbox" name="toppings" value="1">Spinach<br>
-              <input type="checkbox" name="toppings" value="1">Extra Cheese<br>
+            <label for="toppings">Choose your toppings:</label>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="toppings" value="1">Red Onion<br>
+              <input class="form-check-input" type="checkbox" name="toppings" value="1">Jalapeno Peppers<br>
+              <input class="form-check-input" type="checkbox" name="toppings" value="1">Roasted Garlic<br>
+              <input class="form-check-input"  type="checkbox" name="toppings" value="1">Green Peppers<br>
+              <input class="form-check-input" type="checkbox" name="toppings" value="1">Black Olives<br>
+              <input class="form-check-input" type="checkbox" name="toppings" value="1">Kalamata Olives<br>
+              <input class="form-check-input" type="checkbox" name="toppings" value="1">Mushrooms<br>
+              <input class="form-check-input" type="checkbox" name="toppings" value="1">Spinach<br>
+              <input class="form-check-input" type="checkbox" name="toppings" value="1">Extra Cheese<br>
+              <input class="form-check-input" type="checkbox" name="toppings" value="1">Feta Cheese<br>
             </div>
           </div>
         </div>

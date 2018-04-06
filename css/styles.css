@@ -1,3 +1,8 @@
 #output {
   font-size: 30px;
 }
+
+h1 {
+  font-family: verdana;
+  font-weight: bolder;
+}
