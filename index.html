@@ -21,20 +21,38 @@
             </select>
           </div>
           <div class="col col-md">
-            <select class="form-control" id="toppings">
-              <option value="0"></option>
-              <option value="1">Red Onion</option>
-              <option value="2">Green Peppers</option>
-              <option value="3">Black Olives</option>
-              <option value="4">Mushrooms</option>
-              <option value="5">Spinach</option>
-              <option value="6">Extra Cheese</option>
-            </select>
+            <div id="toppings">
+              <div class="radio">
+                <label>
+                  <input type="radio" name="red" value="1">
+                  Red Onion
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="green" value="1">
+                  Green Peppers
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="black" value="1">
+                  Black Olives
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="mush" value="1">
+                  Mushrooms
+                </label>
+              </div>
+            </div>
           </div>
         </div>
         <br>
         <button type="submit" class="btn btn-danger">Order</button>
       </form>
+      <br>
       <div id="output">
         <p></p>
       </div>
