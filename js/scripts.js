@@ -56,18 +56,6 @@ $(document).ready(function() {
     });
     var newPizza = new Pizza(inputSize, inputToppings);
 
-    // $("#pizza").each(function() {
-    //   var newOrder = new Order(newPizza);
-    //   var inputSize = 0;
-    //   $(this).find("#size").each(function() {
-    //     inputSize += parseInt($(this).val());
-    //   });
-    //   var inputToppings = 0;
-    //   $("input:checkbox[name=toppings]:checked").each(function() {
-    //     inputToppings += parseInt($(this).val());
-    //   });
-    //
-    // });
 
     $("#output").text("The price of your order will be $" + newPizza.price() +".");
   });
