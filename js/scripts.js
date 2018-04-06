@@ -9,6 +9,8 @@ Pizza.prototype.price = function() {
 }
 
 
+
+
 // user interface logic
 $(document).ready(function() {
 
@@ -48,27 +50,27 @@ $(document).ready(function() {
 
   $("#order").submit(function(event) {
     event.preventDefault();
-    var inputSize = $("#size").val();
-    var inputToppings = 0;
-    $("input:checkbox[name=toppings]:checked").each(function() {
-       inputToppings += parseInt($(this).val());
-    });
-    var newPizza = new Pizza(inputSize, inputToppings);
-
-
-
-    // $("#pizza").each(function() {
-    //   var newOrder = new Order(newPizza);
-    //   var inputSize = 0;
-    //   $(this).find("#size").each(function() {
-    //     inputSize += parseInt($(this).val());
-    //   });
-    //   var inputToppings = 0;
-    //   $("input:checkbox[name=toppings]:checked").each(function() {
-    //     inputToppings += parseInt($(this).val());
-    //   });
-    //
+    // var inputSize = $("#size").val();
+    // var inputToppings = 0;
+    // $("input:checkbox[name=toppings]:checked").each(function() {
+    //    inputToppings += parseInt($(this).val());
     // });
+    // var newPizza = new Pizza(inputSize, inputToppings);
+
+    $(".new-pizza").each(function() {
+      var newPizza = new Pizza(inputSize, inputToppings)
+      var inputSize = 0;
+      $(this).find("#size").each(function() {
+        inputSize += parseInt($(this).val());
+      });
+      var inputToppings = 0;
+      $(this).find("input:checkbox[name=toppings]:checked").each(function() {
+        inputToppings += parseInt($(this).val());
+      });
+      console.log(inputSize);
+      console.log(inputToppings);
+      console.log(newPizza.price());
+    });
 
     $("#output").text("The price of your order will be $" + newPizza.price() +".");
   });
